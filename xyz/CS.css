@@ -1,0 +1,49 @@
+#body{
+    margin: 1920px;
+    padding:1080px;
+    border-bottom: blueviolet;
+    border-right: blue;
+    border-left:aliceblue;
+    border-left:cadetblue;
+}
+#html{
+    width:200px;
+    height:100px;
+}
+#x{
+    direction:ltr
+}
+#xx{
+    direction:rtl
+
+}
+#xxx{
+    direction:initial
+}
+#xxxx{
+    direction:inherit
+}
+#y{
+  animation-direction:alternate
+}
+#yy{
+    border-top-left-radius:1px;
+}
+#yyy{
+    border-bottom-right-radius:1px;
+}
+#yyyy{
+   border-bottom-left-radius:1px;
+}
+#z{
+ flex-direction:column;
+}
+#zz{
+ flex-direction:column-reverse;
+}
+#zzz{
+ flex-direction:row;
+}
+#zzzz{
+ flex-direction:row-reverse;
+}
