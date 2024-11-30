@@ -2,38 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>二维谐振子模拟</title>
 <script>
-// 初始化画布和上下文
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-// 谐振子的初始状态
-var x = 100, y = 100; // 初始位置
-var vx = 0, vy = 0; // 初始速度
-var ax = 0, ay = 0; // 加速度
-var k = 0.1; // 弹性系数
-var m = 1; // 质量
-var t = 0; // 时间
-var dt = 0.1; // 时间步长
-// 模拟更新函数
+var x = 100, y = 100; 
+var vx = 0, vy = 0; 
+var ax = 0, ay = 0; 
+var k = 0.1; 
+var m = 1; 
+var t = 0; 
+var dt = 0.1; 
 function update(){
-    // 计算加速度
-    ax = -k * x / m;
+    x = -k * x / m;
     ay = -k * y / m;
-    // 更新速度和位置
     vx += ax * dt;
     vy += ay * dt;
     x += vx * dt;
     y += vy * dt;
-    // 清除画布并绘制谐振子
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(x, y, 5, 0, Math.PI*2, false);
     ctx.fill();
-    // 递归调用update函数以产生动画效果
     requestAnimationFrame(update);
 }
-// 开始模拟
 update();
 </script>
 </head>
